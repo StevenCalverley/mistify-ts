@@ -1,15 +1,15 @@
 {
-  "name": "tameablemist",
-  "version": "0.0.1-alpha.2",
+  "name": "mistify",
+  "version": "0.0.1-alpha.1",
   "private": false,
-  "main": "dist/tameablemist.common.js",
+  "main": "dist/mistify.common.js",
   "files": [
     "dist/*"
   ],
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "build-package": "vue-cli-service build --target lib --name tameablemist ./src/index.ts",
+    "build-package": "vue-cli-service build --target lib --name mistify ./src/index.ts",
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint"
   },
