@@ -11,13 +11,9 @@
 
 <script lang="ts">
 import Vue from 'vue';
-import MButton from './components/MButton';
 
 export default Vue.extend({
   name: 'App',
-  components: {
-    MButton,
-  },
 });
 </script>
 

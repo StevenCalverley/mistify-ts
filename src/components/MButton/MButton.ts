@@ -1,7 +1,7 @@
 import Vue, { CreateElement, VNode } from 'vue';
 
 const MButton = Vue.extend({
-  name: 'MButton',
+  name: 'm-button',
   props: {
     id: {
       type: String,

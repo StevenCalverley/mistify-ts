@@ -1,6 +1,6 @@
 import Vue, { PluginFunction } from 'vue';
 import LibrarySettings from './types/LibrarySettings';
-import MButton from './components/MButton';
+import components from './components';
 
 export interface InstallFunction extends PluginFunction<LibrarySettings> {
   installed?: boolean;
@@ -15,7 +15,13 @@ const install: InstallFunction = function installMistify(
 
   install.installed = true;
 
-  vueInstance.component('m-button', MButton);
+  // components
+  for (const componentName in components) {
+    const component = components[componentName];
+    if (component && component.options) {
+      Vue.component(component.options.name, component);
+    }
+  }
 };
 
 // Create module definition for Vue.use()
@@ -25,3 +31,7 @@ const plugin = {
 
 // Default export is library as a whole, registered via Vue.use()
 export default plugin;
+
+if (typeof window !== 'undefined' && window.Vue) {
+  window.Vue.use(plugin);
+}

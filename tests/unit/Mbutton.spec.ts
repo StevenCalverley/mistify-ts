@@ -1,5 +1,5 @@
 import { shallowMount } from '@vue/test-utils';
-import MButton from '@/components/MButton.ts';
+import MButton from '@/components/MButton/MButton';
 
 describe('MButton.vue', () => {
   it('renders with default tag', () => {
