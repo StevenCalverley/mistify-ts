@@ -1,15 +1,5 @@
-import Vue, { PropOptions } from 'vue';
-import ComponentName from '../types/ComponentName';
+import { MComponent } from '../types/ComponentSettings';
 import { MButton } from './MButton';
-
-type MComponent = typeof Vue & {
-  options?: {
-    props?: {
-      [key: string]: PropOptions;
-    };
-    name: ComponentName;
-  };
-};
 
 type Components = {
   [key: string]: MComponent;
