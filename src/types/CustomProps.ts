@@ -1,4 +1,4 @@
-import { PropOptions } from "vue";
+import { PropOptions } from 'vue';
 
 type CustomProps =
   | {

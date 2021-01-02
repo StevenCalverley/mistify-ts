@@ -1,6 +1,6 @@
-import Vue, { PluginFunction } from "vue";
-import LibrarySettings from "./types/LibrarySettings";
-import MButton from "./components/MButton";
+import Vue, { PluginFunction } from 'vue';
+import LibrarySettings from './types/LibrarySettings';
+import MButton from './components/MButton';
 
 export interface InstallFunction extends PluginFunction<LibrarySettings> {
   installed?: boolean;
@@ -9,18 +9,18 @@ export interface InstallFunction extends PluginFunction<LibrarySettings> {
 // install function executed by Vue.use()
 // eslint-disable-next-line max-len
 const install: InstallFunction = function installMistify(
-  vueInstance: typeof Vue
+  vueInstance: typeof Vue,
 ) {
   if (install.installed) return;
 
   install.installed = true;
 
-  vueInstance.component("m-button", MButton);
+  vueInstance.component('m-button', MButton);
 };
 
 // Create module definition for Vue.use()
 const plugin = {
-  install
+  install,
 };
 
 // Default export is library as a whole, registered via Vue.use()

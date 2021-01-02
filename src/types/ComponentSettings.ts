@@ -1,5 +1,5 @@
-import Vue, { PropOptions } from "vue";
-import ComponentName from "./ComponentName";
+import Vue, { PropOptions } from 'vue';
+import ComponentName from './ComponentName';
 
 export type CustomProp = {
   [key: string]:
