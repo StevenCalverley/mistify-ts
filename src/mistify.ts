@@ -19,7 +19,7 @@ const install: InstallFunction = function installMistify(
   for (const componentName in components) {
     const component = components[componentName];
     if (component && component.options) {
-      Vue.component(component.options.name, component);
+      vueInstance.component(component.options.name, component);
     }
   }
 };
