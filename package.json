@@ -1,17 +1,18 @@
 {
-  "name": "mistify",
-  "version": "0.0.1-alpha.1",
+  "name": "tameablemist",
+  "version": "0.0.1-alpha.3",
   "private": false,
   "license": "MIT",
   "author": "Steve Calverley <emailme@tameablemist.com> (http://mistify.tameablemist.com/)",
-  "main": "dist/mistify.common.js",
+  "main": "dist/tameablemist.common.js",
   "files": [
     "dist/*"
   ],
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "build-package": "vue-cli-service build --target lib --name mistify ./src/index.ts",
+    "prepublishOnly": "$npm_execpath build-package",
+    "build-package": "vue-cli-service build --target lib --name tameablemist ./src/mistify.ts",
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint",
     "storybook": "start-storybook -p 6006",
