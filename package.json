@@ -2,6 +2,8 @@
   "name": "mistify",
   "version": "0.0.1-alpha.1",
   "private": false,
+  "license": "MIT",
+  "author": "Steve Calverley <emailme@tameablemist.com> (http://mistify.tameablemist.com/)",
   "main": "dist/mistify.common.js",
   "files": [
     "dist/*"

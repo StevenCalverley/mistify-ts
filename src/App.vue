@@ -10,14 +10,14 @@
 </template>
 
 <script lang="ts">
-import Vue from "vue";
-import MButton from "./components/MButton";
+import Vue from 'vue';
+import MButton from './components/MButton';
 
 export default Vue.extend({
-  name: "App",
+  name: 'App',
   components: {
-    MButton
-  }
+    MButton,
+  },
 });
 </script>
 

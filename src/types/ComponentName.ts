@@ -1,3 +1,3 @@
-type ComponentName = "MButton";
+type ComponentName = 'MButton';
 
 export default ComponentName;

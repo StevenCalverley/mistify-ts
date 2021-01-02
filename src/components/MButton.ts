@@ -1,28 +1,28 @@
-import Vue, { CreateElement, VNode } from "vue";
+import Vue, { CreateElement, VNode } from 'vue';
 
 const MButton = Vue.extend({
-  name: "MButton",
+  name: 'MButton',
   props: {
     id: {
       type: String,
-      required: true
+      required: true,
     },
     tag: {
       type: String,
-      default: "button",
+      default: 'button',
       validator(value) {
-        return ["button", "a"].indexOf(value) !== -1;
-      }
+        return ['button', 'a'].indexOf(value) !== -1;
+      },
     },
     value: {
       type: [String, Number],
-      default: null
+      default: null,
     },
     classes: {
       type: [String, Array, Object],
       default:
-        "block px-4 py-2 text-white transition duration-100 ease-in-out bg-blue-500 border border-transparent rounded shadow-sm hover:bg-blue-600 focus:border-blue-500 focus:ring-2 focus:ring-blue-500 focus:outline-none focus:ring-opacity-50  disabled:opacity-50 disabled:cursor-not-allowed"
-    }
+        'block px-4 py-2 text-white transition duration-100 ease-in-out bg-blue-500 border border-transparent rounded shadow-sm hover:bg-blue-600 focus:border-blue-500 focus:ring-2 focus:ring-blue-500 focus:outline-none focus:ring-opacity-50  disabled:opacity-50 disabled:cursor-not-allowed',
+    },
   },
   render(createElement) {
     const renderFun: (createElement: CreateElement) => VNode = this.render;
@@ -30,19 +30,19 @@ const MButton = Vue.extend({
   },
   methods: {
     blurHandler(e: FocusEvent) {
-      this.$emit("blur", e);
+      this.$emit('blur', e);
     },
     focusHandler(e: FocusEvent) {
-      this.$emit("focus", e);
+      this.$emit('focus', e);
     },
     clickHandler(e: MouseEvent) {
-      this.$emit("click", e);
+      this.$emit('click', e);
     },
     keydownHandler(e: MouseEvent) {
-      this.$emit("keydown", e);
+      this.$emit('keydown', e);
     },
     mousedownHandler(e: MouseEvent) {
-      this.$emit("mousedown", e);
+      this.$emit('mousedown', e);
     },
     /**
      * Attrs according to the button type
@@ -52,7 +52,7 @@ const MButton = Vue.extend({
       return {
         id: this.id,
         value: this.value,
-        type: "button"
+        type: 'button',
       };
     },
     render(createElement: CreateElement): VNode {
@@ -66,13 +66,13 @@ const MButton = Vue.extend({
             focus: this.focusHandler,
             blur: this.blurHandler,
             keydown: this.keydownHandler,
-            mousedown: this.mousedownHandler
-          }
+            mousedown: this.mousedownHandler,
+          },
         },
-        this.$slots.default
+        this.$slots.default,
       );
-    }
-  }
+    },
+  },
 });
 
 export default MButton;

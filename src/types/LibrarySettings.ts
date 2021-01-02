@@ -1,4 +1,4 @@
-import ComponentSettings, { MComponent } from "./ComponentSettings";
+import ComponentSettings, { MComponent } from './ComponentSettings';
 
 type LibrarySettings =
   | {
