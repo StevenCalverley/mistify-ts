@@ -4,6 +4,7 @@
       <h1 class="text-3xl text-gray-50">Mistify</h1>
     </header>
     <main class="mt-4 container mx-auto">
+      <m-badge type="BLUE">Test</m-badge>
       <m-button id="test">Test</m-button>
     </main>
   </div>

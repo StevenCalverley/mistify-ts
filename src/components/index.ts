@@ -1,4 +1,5 @@
 import { MComponent } from '../types/ComponentSettings';
+import MBadge from './MBadge/MBadge.vue';
 import { MButton } from './MButton';
 
 type Components = {
@@ -6,6 +7,7 @@ type Components = {
 };
 
 const components: Components = {
+  MBadge,
   MButton,
 };
 export default components;
