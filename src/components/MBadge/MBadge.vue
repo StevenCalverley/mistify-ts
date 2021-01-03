@@ -6,6 +6,7 @@
       { ' bg-blue-100 text-blue-800': type === 'BLUE' },
       { ' bg-yellow-100 text-yellow-800': type === 'YELLOW' },
       { ' bg-green-100 text-green-800': type === 'GREEN' },
+      { ' bg-purple-100 text-purple-800': type === 'PURPLE' },
       { ' bg-red-100 text-red-800': type === 'RED' },
     ]"
   >
@@ -27,7 +28,11 @@ export default Vue.extend({
       type: String,
       default: 'GRAY',
       validator(value) {
-        return ['GRAY', 'BLUE', 'RED', 'GREEN', 'YELLOW'].indexOf(value) !== -1;
+        return (
+          ['GRAY', 'BLUE', 'RED', 'GREEN', 'YELLOW', 'PURPLE'].indexOf(
+            value,
+          ) !== -1
+        );
       },
     },
   },
