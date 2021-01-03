@@ -9,6 +9,7 @@
       { ' bg-red-100 text-red-800': type === 'RED' },
     ]"
   >
+    <!-- @slot Badge Content-->
     <slot />
   </span>
 </template>
