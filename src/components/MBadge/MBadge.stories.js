@@ -7,7 +7,7 @@ export default {
     type: {
       control: {
         type: 'select',
-        options: ['GRAY', 'BLUE', 'RED', 'GREEN', 'YELLOW'],
+        options: ['GRAY', 'BLUE', 'RED', 'GREEN', 'YELLOW', 'PURPLE'],
       },
     },
   },
@@ -22,4 +22,9 @@ const Template = (args, { argTypes }) => ({
 export const Blue = Template.bind({});
 Blue.args = {
   type: 'BLUE',
+};
+
+export const Purple = Template.bind({});
+Purple.args = {
+  type: 'PURPLE',
 };
